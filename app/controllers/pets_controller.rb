@@ -38,5 +38,9 @@ class PetsController < ApplicationController
   end
 
   def view
+    @petfinder = Array.new
+    @petfinder << @petfinder_client.pet(params[:id])
+
+    render :layout => 'application'
   end
 end
