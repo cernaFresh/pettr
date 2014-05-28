@@ -1,15 +1,4 @@
-<% if !@animal.eql?('view') %>
-	<h1>
-		<%= @animal %>
-	</h1>
-	<div class="alert alert-info alert-dismissable">
-	  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	  Showing <%= @animal.downcase %> near Grand Junction, CO
-	</div>
-<% end %>
-<% if @animal.eql?('view') %>
-	<h1>Now viewing:</h1>
-<% end %>
+<%= pet_list_info(@animal) %>
 <% if !@petfinder.nil?; @petfinder.each do |pets| %>
 	<div class="listing">
 		<%= link_to pets.id do %>

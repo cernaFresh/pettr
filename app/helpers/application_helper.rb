@@ -52,4 +52,18 @@ module ApplicationHelper
     animal_image
 
   end
+
+  def pet_list_info(animal)
+    if animal.eql?('view')
+      raw("<h1>Now viewing:</h1>")
+    elsif animal.nil?
+      "nil"
+    else
+      raw("#{'<h1>' + animal + '</h1>
+        <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        Showing ' + animal.downcase + ' near Grand Junction, CO
+        </div>'}")
+    end
+  end
 end
