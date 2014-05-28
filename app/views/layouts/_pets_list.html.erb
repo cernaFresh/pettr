@@ -1,12 +1,16 @@
 <%= pet_list_info(@animal) %>
 <% if !@petfinder.nil?; @petfinder.each do |pets| %>
-	<div class="listing">
+<div class="listing panel panel-default">
+	<div class="panel-heading">
 		<%= link_to pets.id do %>
-			<h2><%= pets.name %></h2>
+		<h2><%= pets.name %></h2>
 		<% end %>
+	</div>
+	<div class="panel-body">
 		<% pets.photos.each do |cat_pics| %>
-			<%= image_tag(cat_pics.medium, alt: "", class: "img-rounded") %>
+		<%= image_tag(cat_pics.medium, alt: "", class: "img-rounded") %>
 		<% end %>
 		<p><%= pets.description_sanitized %></p>
 	</div>
+</div>
 <% end; end %>

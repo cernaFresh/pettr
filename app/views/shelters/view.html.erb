@@ -1,5 +1,8 @@
 <div class="page-header">
 	<h1><%= @shelter.name %> <small><a href="http://<%= @shelter.address2.downcase %>" target="_blank"><%= @shelter.address2.downcase %></a></small></h1>
+
+	<%= @shelter.id if Rails.env.development? %>
+
 	<address>
 	<%= @shelter.address1 %><br>
 	<%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %><br>

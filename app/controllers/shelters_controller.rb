@@ -1,5 +1,6 @@
 class SheltersController < ApplicationController
   require 'petfinder'
+  require 'time'
 
   before_filter :load_vars
   protected
@@ -16,6 +17,22 @@ class SheltersController < ApplicationController
   public
   def index
   	@shelters = @petfinder_client.find_shelters(@zipcode)
+  	
+
+  	year = 31540020
+
+  	@shelters.delete_if do |shelter|
+  		pet = @petfinder_client.shelter_pets(shelter.id, {"count" => 1})
+  		if pet.first.nil?
+  			true
+  		else
+	  		ptime = Time.parse(pet.first.last_update)
+	  		if Time.now - ptime >= year
+	  			true
+	  		end
+	  	end
+  	end
+
   end
 
   def view
