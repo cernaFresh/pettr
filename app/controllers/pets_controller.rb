@@ -17,6 +17,9 @@ class PetsController < ApplicationController
   end
 
   def cat
+    @petfinder = @petfinder_client.shelter_pets('CO22')
+
+    render :layout => 'application'
   end
 
   def dog
