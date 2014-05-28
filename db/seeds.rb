@@ -22,5 +22,5 @@ end
 @shelters = @petfinder_client.find_shelters(@zipcode)
 
 @shelters.each do |shelter|
-	Shelter.create(name: shelter.name, id: shelter.id, address1: shelter.address1, address2: shelter.address2, city: shelter.city, state: shelter.state, zip: shelter.zip, phone: shelter.phone, fax: shelter.fax, email: shelter.email)
+	Shelter.create(shelter_id: shelter.id, name: shelter.name, address1: shelter.address1, address2: shelter.address2, city: shelter.city, state: shelter.state, zip: shelter.zip, phone: shelter.phone, fax: shelter.fax, email: shelter.email)
 end

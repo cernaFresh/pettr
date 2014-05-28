@@ -13,7 +13,7 @@
 		<% end %>
 		<dl class="dl-horizontal">
 			<dt>Shelter</dt>
-			<dd><%= link_to pets.shelter_id, shelter_url(pets.shelter_id) %></dd>
+			<dd><%= link_to find_shelter_name(pets.shelter_id), shelter_url(pets.shelter_id) %></dd>
 			<dt>Description</dt>
 			<dd><%= pets.description_sanitized %></dd>
 			<dt>Category</dt>
@@ -21,7 +21,7 @@
 			<dt>Info</dt>
 			<dd><%= animal_info(pets) %></dd>
 			<dt>Last Update</dt>
-			<dd><%= readable_time_stamp(pets.last_update) %></dd>
+			<dd><%= time_ago_in_words(pets.last_update) %> ago</dd>
 		</dl>
 	</div>
 </div>
