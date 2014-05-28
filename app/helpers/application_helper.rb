@@ -2,12 +2,16 @@ module ApplicationHelper
 
   # Returns the full title on a per-page basis.
   def full_title(page_title)
-    base_title = "Pettr"
+    base_title = get_brand
     if page_title.empty?
       base_title
     else
       "#{base_title + ' | ' + page_title}"
     end
+  end
+
+  def get_brand
+    "Pettr"
   end
 
   def meta_tag(meta_tag)

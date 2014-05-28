@@ -1,2 +1,18 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="jumbotron">
+	<h1>Welcome to <%= get_brand %></h1>
+	<p>An index of adoptable animals in Grand Junction and surrounding areas.</p>
+</div>
+
+<section class="row text-center">
+			<%= link_to pets_dog_path, class: "col-sx-12 col-md-6 thumbnail" do %>
+				<%= image_tag("/assets/dogs_cube.jpg", alt: "", class: "home-thumbnail-image") %>
+				<h2>Search Dogs</h2>
+				<p>View dogs available for adoption</p>
+			<% end %>
+
+			<%= link_to pets_cat_path, class: "col-sx-12 col-md-6 thumbnail" do %>
+				<%= image_tag("/assets/cats_cube.jpg", alt: "", class: "home-thumbnail-image") %>
+				<h2>Search Cats</h2>
+				<p>View cats available for adoption</p>
+			<% end %>
+</section>

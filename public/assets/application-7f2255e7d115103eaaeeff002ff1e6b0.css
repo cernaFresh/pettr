@@ -1,0 +1,34 @@
+@import url(animate.css);
+@import url(bootstrap.min.css);
+@import url(bootstrap-theme.min.css);
+@import url("http://fonts.googleapis.com/css?family=Yellowtail|Libre+Baskerville");
+/* line 15, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+#main-view {
+  padding-top: 50px;
+}
+
+/* line 19, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.home-thumbnail-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 24, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.yellowtail, .pettr-brand {
+  font-family: 'Yellowtail';
+}
+
+/* line 28, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* line 32, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.blue-font, .pettr-brand {
+  color: #0075cb !important;
+}
+
+/* line 36, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.pettr-brand {
+  font-size: 3em;
+}

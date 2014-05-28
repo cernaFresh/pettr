@@ -2,8 +2,39 @@
 @import "animate.css";
 @import "bootstrap.min.css";
 @import "bootstrap-theme.min.css";
+@import url("http://fonts.googleapis.com/css?family=Yellowtail|Libre+Baskerville");
 
+$yellow: #FFB300;
+$blue: #0075cb;
+$orange: #FE8000;
+$red: #e60025;
+$gray: #222222;
+$gray-powder: #e5e5e5;
+$pink: #ff8094;
 
 #main-view{
 	padding-top:50px;
+}
+
+.home-thumbnail-image{
+	max-width: 100%;
+	height: auto;
+}
+
+.yellowtail {
+	font-family:'Yellowtail';
+}
+
+.baskerville {
+	font-family: 'Libre Baskerville', serif;
+}
+
+.blue-font {
+	color: $blue !important;
+}
+
+.pettr-brand {
+	@extend .yellowtail;
+	@extend .blue-font;
+	font-size: 3em;
 }
