@@ -57,7 +57,7 @@ module ApplicationHelper
     if animal.eql?('view')
       raw("<h1>Now viewing:</h1>")
     elsif animal.nil?
-      "nil"
+      
     else
       raw("#{'<h1>' + animal + '</h1>
         <div class="alert alert-info alert-dismissable">

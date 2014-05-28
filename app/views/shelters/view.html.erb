@@ -1,2 +1,15 @@
-<h1>Shelters#view</h1>
-<p>Find me in app/views/shelters/view.html.erb</p>
+<div class="page-header">
+	<h1><%= @shelter.name %> <small><a href="http://<%= @shelter.address2.downcase %>" target="_blank"><%= @shelter.address2.downcase %></a></small></h1>
+	<address>
+	<%= @shelter.address1 %><br>
+	<%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %><br>
+	<abbr title="Phone">P:</abbr> <%= @shelter.phone %><br>
+	<% if @shelter.fax.length > 1 %>
+	<abbr title="Fax">F:</abbr> <%= @shelter.fax %><br>
+	<% end %>
+	<a href="mailto:#"><%= @shelter.email %></a>
+	</address>
+</div>
+<div class="shelter-listings">
+	<%= render 'layouts/pets_list' %>
+</div>

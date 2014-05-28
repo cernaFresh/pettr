@@ -1,2 +1,16 @@
-<h1>Shelters#index</h1>
-<p>Find me in app/views/shelters/index.html.erb</p>
+<h1>Shelters Index</h1>
+
+<table class="table">
+	<th>Shelter</th>
+	<th>Location</th>
+	<% @shelters.each do |shelter| %>
+		<tr>
+			<td>
+				<%= link_to shelter.name, shelter.id %>
+			</td>
+			<td>
+				<%= shelter.city %>
+			</td>
+		</tr>
+	<% end %>
+</table>
