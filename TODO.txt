@@ -1,4 +1,5 @@
 TODO:
 
+-more content in each individual listing
 -share button
 -footer

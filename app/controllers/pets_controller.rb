@@ -33,7 +33,7 @@ class PetsController < ApplicationController
     when "Pigs"
       animal_type = "pig"
     when "Reptiles"
-      animal_type = "reptiles"
+      animal_type = "reptile"
     when "Small and Furry Animals"
       animal_type = "smallfurry"
     else

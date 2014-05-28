@@ -1,5 +1,6 @@
 <%= pet_list_info(@animal) %>
 <% if !@petfinder.nil?; @petfinder.each do |pets| %>
+<% if !pets.photos.empty? && !pets.description_sanitized.empty? %>
 <div class="listing panel panel-default">
 	<div class="panel-heading">
 		<%= link_to pet_url(pets.id) do %>
@@ -13,4 +14,5 @@
 		<p><%= pets.description_sanitized %></p>
 	</div>
 </div>
+<% end %>
 <% end; end %>
