@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<%= render 'layouts/metatags' %>
+
 <head>
-  <title>Pettr</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="<%= meta_tag(yield(:description)) %>" >
+	<!-- Begin Facebook OpenGraph meta properties -->
+	<meta property="og:title" content="<%= full_title(yield(:title)) %>" />
+	<meta property="og:description" content="<%= meta_tag(yield(:description)) %>" />
+	<meta property="og:image" content="<%= meta_tag_image(yield(:image)) %>" />
+	<meta property="og:type" content="cause" />
+	<meta property="og:url" content="<%= canon_url %>" />
+	<meta property="og:site_name" content="Pettr" />
+	<!-- end OpenGraph tags -->
+
+  <title><%= full_title(yield :title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
