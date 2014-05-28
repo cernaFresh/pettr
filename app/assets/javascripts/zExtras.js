@@ -59,8 +59,13 @@ $(document).ready(function() {
     $(document).on('page:change', function() {
         // $("#main-view").show();
         // $('#main-view').animateCSS("fadeIn");
-
         $('.listing').hide();
         $('.listing').animateCSS("fadeInRight");
+
+        setTimeout(
+            function() {
+                $('.alert').animateCSS("pulse");
+            }, 2000);
+
     });
 });
