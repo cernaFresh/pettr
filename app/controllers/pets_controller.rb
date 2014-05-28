@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
   
 
-  
+  require 'petfinder'
 
   def barnyard
   end
