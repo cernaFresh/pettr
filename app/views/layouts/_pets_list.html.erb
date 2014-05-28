@@ -1,0 +1,11 @@
+<% if !@petfinder.nil?; @petfinder.each do |pets| %>
+	<div class="listing">
+		<%= link_to pets.id do %>
+			<h2><%= pets.name %></h2>
+		<% end %>
+		<% pets.photos.each do |cat_pics| %>
+			<%= image_tag(cat_pics.medium, alt: "", class: "img-rounded") %>
+		<% end %>
+		<p><%= pets.description_sanitized %></p>
+	</div>
+<% end; end %>
