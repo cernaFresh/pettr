@@ -26,8 +26,14 @@ module ApplicationHelper
       "#{'http://pettr.skytable.net' + og_image}"
     end
   end
+
   def canon_url
     "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
+  end
+
+  def pet_url(id)
+    url1 = canon_url
+    "#{request.protocol}#{request.host_with_port}/pets/#{id}"
   end
 
   def metatag_animal_image(animal)

@@ -2,7 +2,7 @@
 <% if !@petfinder.nil?; @petfinder.each do |pets| %>
 <div class="listing panel panel-default">
 	<div class="panel-heading">
-		<%= link_to pets.id do %>
+		<%= link_to pet_url(pets.id) do %>
 		<h2 class="listing-title"><%= pets.name %></h2>
 		<% end %>
 	</div>
