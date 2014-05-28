@@ -1,0 +1,6 @@
+@import url(bootstrap.min.css);
+@import url(bootstrap-theme.min.css);
+/* line 5, /Users/cerna/Developer/pettr/app/assets/stylesheets/application.css.scss */
+.main-view {
+  padding-top: 50px;
+}
