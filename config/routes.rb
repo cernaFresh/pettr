@@ -1,4 +1,6 @@
 Pettr::Application.routes.draw do
+  get "shelters/index"
+  get "shelters/view"
   get "home/index"
   get "pets/barnyard"
   get "pets/bird"
