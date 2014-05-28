@@ -11,6 +11,7 @@ class PetsController < ApplicationController
 
     @petfinder_client = Petfinder::Client.new
     @zipcode = 81501
+    @isview = false
   end
 
   def set_meta_info(animal)
@@ -45,6 +46,7 @@ class PetsController < ApplicationController
     set_meta_info(animal)
     animal_type = get_animal_type(animal)
     @petfinder = @petfinder_client.find_pets(animal_type, @zipcode)
+    @animal_title = get_animal_type(animal)
 
     render :layout => 'application'
   end
@@ -94,6 +96,7 @@ class PetsController < ApplicationController
     @petfinder = Array.new
     @petfinder << @petfinder_client.pet(params[:id])
     @animal = 'view'
+    @animal_title = @petfinder.first.name
 
     render :layout => 'application'
   end
