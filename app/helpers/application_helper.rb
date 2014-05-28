@@ -109,7 +109,11 @@ module ApplicationHelper
   def find_shelter_name(id)
     # "WOW"
     shelter = Shelter.where(shelter_id: id).first
-    "#{shelter.attributes.values[2]}"
+    if shelter.nil?
+      "click for shelter info"
+    else
+      "#{shelter.attributes.values[2]}"
+    end
   end
 
 end
